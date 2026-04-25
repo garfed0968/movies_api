@@ -33,13 +33,32 @@ const server = http.createServer(async (req, res) => {
             res.end('Movie not found');
         }
     }
+    else if(req.url === 'api/movies' && req.method === 'POST'){
+        let body ='';
+        req.on('data' ,chunk => {
+            body += chunk.toString();});
+        req.on('end' , async () =>{
+            const movie = JSON.parse(body);
+            const newMovie =awit addMovie(movie);
+            res.writeHead(201,{'Content-Type':'application/json'});
+            res.end(JSON.stringify(newMovie));
+        });
+    }
    
     else {
         res.writeHead(404, { 'Content-Type': 'text/plain' });
         res.end('Route not found');
     }
 });
-
+const addMovie =async(ovie) => {
+    const data = await fs.promises.readFile(moviesDataPath, 'utf-8');
+    const newId = movies.length > 0 ? movies[movies.length-1].id + 1 : 1;
+     movie.id=newId;
+    movies.push(movie);
+    await fs.promises.writeFile(moviesDataPath,JSON.stringify(movies, nill,2));
+    return movie;
+};
+    
 const PORT = 3000;
 server.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
