@@ -1,0 +1,67 @@
+[
+  {
+    "id": 1,
+    "name": "Inception",
+    "review": "A mind-bending movie about dreams within dreams."
+  },
+  {
+    "id": 2,
+    "name": "The Dark Knight",
+    "review": "One of the best superhero movies ever made."
+  },
+  {
+    "id": 3,
+    "name": "Toy Story",
+    "review": "A heartwarming story about toys that come to life."
+  },
+  {
+    "id": 4,
+    "name": "Frozen",
+    "review": "A magical story of sisterhood and self-discovery."
+  },
+  {
+    "id": 5,
+    "name": "Finding Nemo",
+    "review": "An emotional underwater adventure of a father searching for his son."
+  },
+  {
+    "id": 6,
+    "name": "Spider-Man: Into the Spider-Verse",
+    "review": "A visually stunning animated superhero film with a unique style."
+  },
+  {
+    "id": 7,
+    "name": "The Lion King",
+    "review": "A classic animated film about responsibility and destiny."
+  },
+  {
+    "id": 8,
+    "name": "Shrek",
+    "review": "A funny and unconventional fairy tale adventure."
+  },
+  {
+    "id": 9,
+    "name": "Coco",
+    "review": "A colorful story celebrating family and Mexican culture."
+  },
+  {
+    "id": 10,
+    "name": "Kung Fu Panda",
+    "review": "An inspiring story about believing in yourself."
+  },
+  {
+    "id": 11,
+    "name": "How to Train Your Dragon",
+    "review": "A touching story about friendship between a boy and a dragon."
+  },
+  {
+    "id": 12,
+    "name": "Despicable Me",
+    "review": "A fun story about a villain who becomes a loving father."
+  },
+  {
+    "name": "starwars",
+    "review": "Amazing  movie",
+    "id": 13
+  }
+]
