@@ -39,7 +39,7 @@ const server = http.createServer(async (req, res) => {
             body += chunk.toString();});
         req.on('end' , async () =>{
             const movie = JSON.parse(body);
-            const newMovie =awit addMovie(movie);
+            const newMovie =await addMovie(movie);
             res.writeHead(201,{'Content-Type':'application/json'});
             res.end(JSON.stringify(newMovie));
         });
@@ -50,12 +50,13 @@ const server = http.createServer(async (req, res) => {
         res.end('Route not found');
     }
 });
-const addMovie =async(ovie) => {
+const addMovie =async(movie) => {
     const data = await fs.promises.readFile(moviesDataPath, 'utf-8');
+    const movies =JSON.parse(data);
     const newId = movies.length > 0 ? movies[movies.length-1].id + 1 : 1;
      movie.id=newId;
     movies.push(movie);
-    await fs.promises.writeFile(moviesDataPath,JSON.stringify(movies, nill,2));
+    await fs.promises.writeFile(moviesDataPath,JSON.stringify(movies, null,2));
     return movie;
 };
     
